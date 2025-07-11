@@ -3,6 +3,8 @@ import useTodoStore from "../store/useTodoStore.js";
 import ConfirmationModal from "./ConfirmationModal.jsx";
 import { MdOutlineDarkMode, MdLightMode } from "react-icons/md";
 import SortDropdown from "./SortDropdown.jsx";
+import ProgressBar from "./ProgressBar.jsx";
+import DailyQuotes from "./DailyQuotes.jsx";
 
 const TodoDashboard = () => {
   const [showModal, setShowModal] = useState(false);
@@ -22,8 +24,8 @@ const TodoDashboard = () => {
   }
 
   return (
-    <div className="w-[100%] sm:w-[80%] md:w-[75%] lg:w-[70%] xl:w-[50%] p-2 lg:p-1 mt-2 mb-2 rounded-lg flex flex-col gap-2 min-w-0">
-      <div className="flex justify-evenly border border-black py-2 sm:py-3 bg-blue-900 rounded-md text-white min-w-0 gap-3 dark:bg-gray-800">
+    <div className="w-[98%] sm:p-3 sm:w-[85%] md:p-2 md:w-[80%] lg:w-[100%]  lg:mt-1 mt-2 mb-2 rounded-lg flex flex-col gap-2 min-w-0 text-center  lg:items-center ">
+      <div className="flex justify-evenly border border-black py-2 sm:py-3 bg-blue-800 rounded-md text-white min-w-0 gap-3 dark:bg-gray-800 lg:dark:bg-gray-900 lg:py-10 lg:w-full">
         <div>
           <span className="text-md sm:text-lg xl:text-xl text-blue-300">
             {tasksLength}
@@ -46,10 +48,14 @@ const TodoDashboard = () => {
         </div>
       </div>
 
-      <div className="flex justify-center gap-3 min-w-0">
+      <div className="hidden lg:flex mb-2 w-full">
+        <ProgressBar tasksLength={tasksLength} finishedTasks={finishedTasks} />
+      </div>
+
+      <div className="flex items-center lg:w-full gap-3 min-w-0">
         <div className="flex-1 flex gap-2 min-w-0">
           <button
-            className="bg-yellow-600 dark:bg-gray-800 text-white
+            className="bg-yellow-600 hover:bg-yellow-500 dark:bg-gray-800 lg:dark:bg-gray-900 dark:hover:bg-gray-700 text-white
              px-2 sm:px-3 sm:py-2 md:px-4 md:py-3 lg:px-5 lg:py-4  xl:px-6  rounded-lg  border-b border-black"
             onClick={toggleDarkMode}
           >
@@ -60,19 +66,23 @@ const TodoDashboard = () => {
             )}
           </button>
           <button
-            className="bg-red-800 text-white text-sm py-1 px-2 sm:px-3 md:px-4 xl:text-lg rounded-lg border-b border-black"
+            className="bg-red-800 hover:bg-red-500 text-white text-sm py-1 px-2 sm:px-3 md:px-4 xl:text-lg rounded-lg border-b border-black"
             onClick={handleDeleteConfirmation}
           >
             Delete All
           </button>
         </div>
 
-        <div className="relative flex items-center gap-2 shrink-0">
-          <label htmlFor="sortOptions" className="text-white xl:text-xl">
+        <div className="relative flex items-center gap-3 shrink-0">
+          <p className=" text-white lg:text-black xl:text-xl lg:dark:text-white">
             Sort by:{" "}
-          </label>
+          </p>
           <SortDropdown value={sortOrder} onChange={setSortOrder} />
         </div>
+      </div>
+
+      <div className="hidden lg:flex w-full border border-black lg:flex-col justify-center items-center rounded-lg mt-3">
+        <DailyQuotes />
       </div>
 
       {showModal && <ConfirmationModal setShowModal={setShowModal} />}

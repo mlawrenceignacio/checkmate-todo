@@ -61,14 +61,14 @@ const TodoList = () => {
   }, [editingTodoId]);
 
   return (
-    <div className="flex-1 overflow-y-auto scrollbar-hidden items-center px-2 pt-1 pb-10 flex flex-col gap-2 dark:bg-gray-800">
+    <div className="flex-1 overflow-y-auto scrollbar-hidden items-center pt-3 pb-10 flex flex-col gap-2 dark:bg-gray-800">
       {loading ? (
         <Spinner />
       ) : todos.length > 0 ? (
         sortedTodos.map((todo) => (
           <div
             key={todo._id}
-            className={`w-[90%] sm:w-[75%] md:w-[70%] lg:w-[55%] xl:w-[50%] min-w-0 bg-blue-500 dark:bg-gray-900 flex flex-wrap rounded-xl p-5 lg:p-5 border-black border-b-2  transition-all duration-300 opacity-0 animate-fade-in ${
+            className={`w-[90%] sm:w-[80%] md:w-[80%] lg:w-[90%] xl:w-[95%] min-w-0 bg-blue-500 dark:bg-gray-900 flex flex-col rounded-xl p-5 border-black border-b-2 transition-all duration-300 opacity-0 animate-fade-in ${
               todo.completed ? "bg-green-500 dark:bg-gray-700" : ""
             }`}
           >
@@ -132,7 +132,7 @@ const TodoList = () => {
                     </p>
 
                     {!todo.completed && (
-                      <div className="mt-2 text-black text-[0.625rem] dark:text-white xl:text-sm">
+                      <div className="mt-2 text-black text-[0.625rem] dark:text-white xl:text-xs">
                         <Timestamps
                           text={"Created: "}
                           stamp={new Date(todo.createdAt).toLocaleString()}
