@@ -68,7 +68,7 @@ const TodoList = () => {
         sortedTodos.map((todo) => (
           <div
             key={todo._id}
-            className={`w-[90%] sm:w-[75%] md:w-[70%] lg:w-[55%] xl:w-[50%] min-w-0 bg-blue-500 dark:bg-gray-900 flex flex-wrap rounded-xl p-5 border-black border-b-2  transition-all duration-300 opacity-0 animate-fade-in ${
+            className={`w-[90%] sm:w-[75%] md:w-[70%] lg:w-[55%] xl:w-[50%] min-w-0 bg-blue-500 dark:bg-gray-900 flex flex-wrap rounded-xl p-5 lg:p-5 border-black border-b-2  transition-all duration-300 opacity-0 animate-fade-in ${
               todo.completed ? "bg-green-500 dark:bg-gray-700" : ""
             }`}
           >
@@ -121,7 +121,7 @@ const TodoList = () => {
                       </p>
                     )}
                     <p
-                      className={`break-words  whitespace-pre-wrap text-left text-white text-md font-semibold border-blue-800 border-b rounded py-1 xl:text-2xl ${
+                      className={`break-words  whitespace-pre-wrap text-left text-white text-md font-semibold border-blue-800 border-b rounded py-1 xl:text-xl ${
                         todo.completed
                           ? "line-through text-green-100 border-none"
                           : ""
@@ -139,7 +139,7 @@ const TodoList = () => {
                         />
                         {todo.updatedAt !== todo.createdAt && (
                           <Timestamps
-                            text={"Update: "}
+                            text={"Updated: "}
                             stamp={new Date(todo.updatedAt).toLocaleString()}
                           />
                         )}

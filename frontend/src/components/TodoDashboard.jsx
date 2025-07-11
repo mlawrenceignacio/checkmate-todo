@@ -22,7 +22,7 @@ const TodoDashboard = () => {
   }
 
   return (
-    <div className="w-[100%] sm:w-[80%] md:w-[75%] lg:w-[70%] xl:w-[50%] p-2 mt-2 mb-2 rounded-lg flex flex-col gap-2 min-w-0">
+    <div className="w-[100%] sm:w-[80%] md:w-[75%] lg:w-[70%] xl:w-[50%] p-2 lg:p-1 mt-2 mb-2 rounded-lg flex flex-col gap-2 min-w-0">
       <div className="flex justify-evenly border border-black py-2 sm:py-3 bg-blue-900 rounded-md text-white min-w-0 gap-3 dark:bg-gray-800">
         <div>
           <span className="text-md sm:text-lg xl:text-xl text-blue-300">
