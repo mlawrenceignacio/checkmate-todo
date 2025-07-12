@@ -40,9 +40,10 @@ Checkmate is a simple yet functional full-stack todo app built using the **MERN 
 
 ---
 
-## 📌
+## 📌 NOTES
 
 - No authentication: Anyone can use the app without logging in.
 - Tasks are public, stored in a shared database.
 
-
+## 📚 Credits
+- Daily quotes are fetched from the API Ninjas Quotes API.
