@@ -38,7 +38,7 @@ const SortDropdown = ({ value, onChange }) => {
     <div ref={dropdownRef} className="text-sm xl:text-lg">
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="bg-blue-200 dark:bg-gray-400 lg:dark:bg-gray-700 lg:dark:text-white px-3 py-2 rounded-lg border-b border-black cursor-pointer focus:outline-none w-full text-left lg:dark:border hover:bg-blue-500 hover:text-white
+        className="bg-blue-200 dark:bg-gray-400 lg:dark:bg-gray-700 lg:dark:text-white px-2 py-1  md:py-2 lg:py-3 xl:py-2 lg:px-3 rounded-lg border-b border-black cursor-pointer focus:outline-none w-full text-left lg:dark:border hover:bg-blue-500 hover:text-white
         lg:dark:hover:bg-gray-900 dark:hover:bg-gray-800"
       >
         {selectedLabel}

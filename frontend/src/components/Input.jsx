@@ -13,14 +13,14 @@ const Input = () => {
   }
 
   return (
-    <div className="py-3 flex justify-center w-full bg-white dark:bg-gray-800">
+    <div className="pb-2 lg:mt-3 flex justify-center w-full bg-white dark:bg-gray-800">
       <form
         onSubmit={handleAddTask}
-        className="flex gap-2 justify-center bg-blue-800 px-3 py-4 w-[95%] sm:w-[80%] md:w-[80%] lg:py-6 sm:px-4 md:px-5 md:py-5 lg:w-full xl:py-6 xl:px-7 rounded-xl border-b-2 border-black dark:bg-gray-900 min-w-0 dark:border-none "
+        className="flex gap-2 justify-center bg-blue-800 px-3 py-4 w-[90%] sm:w-[90%] lg:py-4 sm:px-5 sm:py-5  lg:w-full lg:px-4 rounded-xl border-b-2 border-black dark:bg-gray-900 min-w-0  dark:border-none"
       >
         <input
           type="text"
-          className="flex-1 outline-none rounded-lg bg-white dark:bg-gray-300 px-3 py-2 border-b-2 border-black dark:border-none placeholder-gray-600 sm:px-3 md:px-4 lg:px-5 lg:py-3 lg:text-lg"
+          className="flex-1 outline-none rounded-lg bg-white dark:bg-gray-300 px-3 py-2 border-b-2 border-black dark:border-none placeholder-gray-600 sm:px-3 md:px-4 lg:px-4 lg:py-2 lg:text-lg"
           onChange={(e) => setTask(e.target.value)}
           onKeyDown={(e) => {
             if (e.key === "Enter") {

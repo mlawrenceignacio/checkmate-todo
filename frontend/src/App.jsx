@@ -17,7 +17,7 @@ function App() {
             <TodoDashboard />
           </div>
 
-          <div className="flex flex-col flex-1 lg:items-center overflow-hidden bg-white dark:bg-gray-800 w-full ">
+          <div className="flex flex-col flex-1 items-center overflow-hidden bg-white dark:bg-gray-800 w-full ">
             <Input />
             <TodoList />
           </div>

@@ -36,10 +36,10 @@ const DailyQuotes = () => {
   return (
     <div className="rounded-lg py-5 text-black dark:text-white w-[90%]">
       <div className="flex flex-col justify-center text-center items-center z-10">
-        <p className="font-bold mb-2 text-lg font-serif text-blue-800 dark:text-blue-400">
+        <p className="font-bold mb-2 text-md font-serif text-blue-800 dark:text-blue-400">
           Quote of the day:{" "}
         </p>
-        <p className="w-[90%] font-mono ">{quote}</p>
+        <p className="w-[90%] font-mono text-sm">{quote}</p>
       </div>
     </div>
   );

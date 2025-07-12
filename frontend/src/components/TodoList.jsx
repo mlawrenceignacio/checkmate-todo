@@ -61,14 +61,14 @@ const TodoList = () => {
   }, [editingTodoId]);
 
   return (
-    <div className="flex-1 overflow-y-auto scrollbar-hidden items-center pt-3 pb-10 flex flex-col gap-2 dark:bg-gray-800">
+    <div className="flex-1 overflow-y-auto scrollbar-hidden items-center pb-10 flex flex-col gap-2 dark:bg-gray-800 w-[90%]">
       {loading ? (
         <Spinner />
       ) : todos.length > 0 ? (
         sortedTodos.map((todo) => (
           <div
             key={todo._id}
-            className={`w-[90%] sm:w-[80%] md:w-[80%] lg:w-[90%] xl:w-[95%] min-w-0 bg-blue-500 dark:bg-gray-900 flex flex-col rounded-xl p-5 border-black border-b-2 transition-all duration-300 opacity-0 animate-fade-in ${
+            className={`w-full sm-[] min-w-0 bg-blue-500 dark:bg-gray-900 flex flex-col rounded-xl p-5 border-black border-b-2 transition-all duration-300 opacity-0 animate-fade-in ${
               todo.completed ? "bg-green-500 dark:bg-gray-700" : ""
             }`}
           >

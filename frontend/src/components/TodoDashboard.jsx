@@ -56,7 +56,7 @@ const TodoDashboard = () => {
         <div className="flex-1 flex gap-2 min-w-0">
           <button
             className="bg-yellow-600 hover:bg-yellow-500 dark:bg-gray-800 lg:dark:bg-gray-900 dark:hover:bg-gray-700 text-white
-             px-2 sm:px-3 sm:py-2 md:px-4 md:py-3 lg:px-5 lg:py-4  xl:px-6  rounded-lg  border-b border-black"
+             px-2 sm:px-3 sm:py-2 md:px-4 md:py-3 lg:px-5 lg:py-3  xl:px-4  rounded-lg  border-b border-black"
             onClick={toggleDarkMode}
           >
             {darkMode ? (
@@ -81,7 +81,7 @@ const TodoDashboard = () => {
         </div>
       </div>
 
-      <div className="hidden lg:flex w-full border border-black lg:flex-col justify-center items-center rounded-lg mt-3">
+      <div className="hidden lg:flex flex-1 w-full border border-black lg:flex-col justify-center items-center rounded-lg mt-2">
         <DailyQuotes />
       </div>
 
