@@ -33,13 +33,6 @@ Checkmate is a simple yet functional full-stack todo app built using the **MERN 
   - Render (for both frontend and backend)
 
 ---
-
-## 🌐 Live Demo
-
-[🔗 CheckMate on Render](https://checkmate-todo.onrender.com)  
-
----
-
 ## 📌 NOTES
 
 - No authentication: Anyone can use the app without logging in.
